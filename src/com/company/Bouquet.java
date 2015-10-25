@@ -105,7 +105,7 @@ public class Bouquet {
 
     public static void main(String[] args) {
 
-        //Ñîçäà¸ì áóêåò èç 15 öâåòêîâ
+        //Создаём букет из 15 цветков
         Bouquet bk1 = new Bouquet(15);
         System.out.println(bk1);
 
