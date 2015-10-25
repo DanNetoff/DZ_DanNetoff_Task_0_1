@@ -8,7 +8,7 @@ import java.util.Random;
  * Created by Dan on 25.10.2015.
  */
 
-// enum цветов
+// enum С†РІРµС‚РєРѕРІ
 enum Flowers{Sunflower("Sunflower",5,0.5,0.33),Pion("Pion",2,0.20,0.5),Rose("Rose",3,0.3,1);
     private String name;
     private int fresh;
@@ -26,7 +26,7 @@ enum Flowers{Sunflower("Sunflower",5,0.5,0.33),Pion("Pion",2,0.20,0.5),Rose("Ros
     public void setPrice(double price) {
         this.price = price;
     }
-    // Конструтор ;)
+    // РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ ;)
     Flowers(String name, int fresh, double length, double price) {
         this.name = name;
         this.fresh = fresh;
@@ -50,9 +50,9 @@ public class Bouquet {
         Random r = new Random();
         bouquetPrice = 0;
         for (int i = 0; i < count; i++) {
-            // добавляем рандомный цветок из enum Flowers[]
+            // // РґРѕР±Р°РІР»СЏРµРј СЂР°РЅРґРѕРјРЅС‹Р№ С†РІРµС‚РѕРє РёР· enum Flowers[]
             this.bouquet[i] =Flowers.values()[r.nextInt(Flowers.values().length)];
-            // Сразу считаем цену букета
+            // // РЎСЂР°Р·Сѓ СЃС‡РёС‚Р°РµРј С†РµРЅСѓ Р±СѓРєРµС‚Р°
             this.bouquetPrice = this.bouquetPrice + this.bouquet[i].getPrice();
         }
     }
@@ -81,7 +81,7 @@ public class Bouquet {
                 '}';
     }
 
-    // Внутренний класс нужен для создания Компаратора(нужен переопределённый метод compare) для вызова Arrays.sort(T[] a, Comparator<T>)
+   // Р’РЅСѓС‚СЂРµРЅРЅРёР№ РєР»Р°СЃСЃ РЅСѓР¶РµРЅ РґР»СЏ СЃРѕР·РґР°РЅРёСЏ РљРѕРјРїР°СЂР°С‚РѕСЂР°(РЅСѓР¶РµРЅ РїРµСЂРµРѕРїСЂРµРґРµР»С‘РЅРЅС‹Р№ РјРµС‚РѕРґ compare) РґР»СЏ РІС‹Р·РѕРІР° Arrays.sort(T[] a, Comparator<T>)
     static private class BouquetSortByFresh implements Comparator<Flowers> {
 
         @Override
@@ -105,7 +105,7 @@ public class Bouquet {
 
     public static void main(String[] args) {
 
-        //Создаём букет из 15 цветков
+        //Г‘Г®Г§Г¤Г ВёГ¬ ГЎГіГЄГҐГІ ГЁГ§ 15 Г¶ГўГҐГІГЄГ®Гў
         Bouquet bk1 = new Bouquet(15);
         System.out.println(bk1);
 
