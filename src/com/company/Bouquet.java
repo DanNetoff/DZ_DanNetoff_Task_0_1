@@ -14,6 +14,13 @@ enum Flowers{Sunflower("Sunflower",5,0.5,0.33),Pion("Pion",2,0.20,0.5),Rose("Ros
     private int fresh;
     private double length;
     private double price;
+    // Конструктор ;)
+    Flowers(String name, int fresh, double length, double price) {
+        this.name = name;
+        this.fresh = fresh;
+        this.length = length;
+        this.price = price;
+    }
 
     public double getPrice() {
         return price;
@@ -26,13 +33,6 @@ enum Flowers{Sunflower("Sunflower",5,0.5,0.33),Pion("Pion",2,0.20,0.5),Rose("Ros
     public void setPrice(double price) {
         this.price = price;
     }
-    // Конструктор ;)
-    Flowers(String name, int fresh, double length, double price) {
-        this.name = name;
-        this.fresh = fresh;
-        this.length = length;
-        this.price = price;
-    }
 
     @Override
     public String toString() {
@@ -43,8 +43,9 @@ enum Flowers{Sunflower("Sunflower",5,0.5,0.33),Pion("Pion",2,0.20,0.5),Rose("Ros
 public class Bouquet {
 
     private double bouquetPrice;
+    // // Для хранения цветов, используем обычный массив
     private Flowers[] bouquet;
-
+    // // Конструктор;)
     Bouquet(int count){
         this.bouquet = new Flowers[count];
         Random r = new Random();
@@ -81,7 +82,7 @@ public class Bouquet {
                 '}';
     }
 
-   // Внутренний класс нужен для создания Компаратора(нужен переопределённый метод compare) для вызова Arrays.sort(T[] a, Comparator<T>)
+   // // Внутренний класс нужен для создания Компаратора(нужен переопределённый метод compare) для вызова Arrays.sort(T[] a, Comparator<T>)
     static private class BouquetSortByFresh implements Comparator<Flowers> {
 
         @Override
@@ -105,11 +106,11 @@ public class Bouquet {
 
     public static void main(String[] args) {
 
-        //Создаём букет из 15 цветков
+        // // Создаём букет из 15 цветков
         Bouquet bk1 = new Bouquet(15);
         System.out.println(bk1);
-        // Для наглядности, передаем в один метод 2 параметра, один из элементов Экземпляра класса,
-        // второй - статический метод inner класса, принадлежащий к типу Bouquet, а не к экземплярам.
+        // // Для наглядности, передаем в один метод 2 параметра, один из элементов Экземпляра класса,
+        // // второй - статический метод inner класса, принадлежащий к типу Bouquet, а не к экземплярам.
         Arrays.sort(bk1.getBouquet(),Bouquet.getFreshComparator());
         System.out.println(bk1);
 
