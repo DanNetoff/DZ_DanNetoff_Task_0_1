@@ -108,7 +108,8 @@ public class Bouquet {
         //Создаём букет из 15 цветков
         Bouquet bk1 = new Bouquet(15);
         System.out.println(bk1);
-
+        // Для наглядности, передаем в один метод 2 параметра, один из элементов Экземпляра класса,
+        // второй - статический метод inner класса, принадлежащий к типу Bouquet, а не к экземплярам.
         Arrays.sort(bk1.getBouquet(),Bouquet.getFreshComparator());
         System.out.println(bk1);
 
