@@ -99,7 +99,8 @@ public class Bouquet {
                 return 0;
         }
     }
-
+    
+    // Тут Генерик;) на след уроке расскажут о нём
     static Comparator<Flowers> getFreshComparator(){
         return new BouquetSortByFresh();
     }
